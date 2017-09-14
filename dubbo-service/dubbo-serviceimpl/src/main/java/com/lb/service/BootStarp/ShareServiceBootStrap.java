@@ -11,10 +11,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @phone 18895737300
  * @date 2017年9月14日 下午3:01:48
  */
-public class StartServiceImpl {
+public class ShareServiceBootStrap {
 
 	@Autowired
-	private static Logger log = LoggerFactory.getLogger(StartServiceImpl.class);
+	private static Logger log = LoggerFactory.getLogger(ShareServiceBootStrap.class);
 
 	public static void main(String[] args) {
 		try {
@@ -28,10 +28,10 @@ public class StartServiceImpl {
 		} catch (Exception e) {
 			log.error("== DubboProvider context start error:", e);
 		}
-		synchronized (StartServiceImpl.class) {
+		synchronized (ShareServiceBootStrap.class) {
 			while (true) {
 				try {
-					StartServiceImpl.class.wait();
+					ShareServiceBootStrap.class.wait();
 				} catch (InterruptedException e) {
 					log.error("== synchronized error:", e);
 				}
