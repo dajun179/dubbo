@@ -1,4 +1,4 @@
-package com.lib.mapper.user;
+package com.lb.mapper.user;
 
 import com.lb.user.domain.pojo.SysUserDO;
 

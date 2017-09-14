@@ -1,4 +1,4 @@
-package com.lib.service.startservice.impl;
+package com.lb.service.BootStarp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

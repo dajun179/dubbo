@@ -1,28 +1,18 @@
-package com.lib.utils;
+package com.lb.utils;
 
-import java.beans.BeanInfo;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Method;
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-
 import java.util.Map.Entry;
 
 public class CommonUtil {
 
-	
 	/**
 	 * 获取当前时间
 	 * @return

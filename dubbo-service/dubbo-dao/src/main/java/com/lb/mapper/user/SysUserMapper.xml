@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lib.mapper.user.SysUserMapper">
+<mapper namespace="com.lb.mapper.user.SysUserMapper">
 	<resultMap id="BaseResultMap"
 		type="com.lb.user.domain.pojo.SysUserDO">
 		<id column="UserID" property="userID" jdbcType="INTEGER" />
 		<result column="LoginName" property="loginName" jdbcType="VARCHAR" />
-		<result column="LoginPassWord" property="loginPassWord" jdbcType="VARCHAR" />
+		<result column="LoginPassWord" property="loginPassword" jdbcType="VARCHAR" />
 		<result column="Name" property="name" jdbcType="VARCHAR" />
 		<result column="Phone" property="phone" jdbcType="VARCHAR" />
 		<result column="Email" property="email" jdbcType="VARCHAR" />
@@ -27,16 +27,16 @@
 	<insert id="insertSysUser" parameterType="com.lb.user.domain.pojo.SysUserDO">
 		insert into sysuser
 		<trim prefix="(" suffix=")" suffixOverrides=",">
-			<if test="userid != null">
+			<if test="userID != null">
 				UserID,
 			</if>
 			<if test="name != null">
 				Name,
 			</if>
-			<if test="loginname != null">
+			<if test="loginName != null">
 				LoginName,
 			</if>
-			<if test="loginPassWord != null">
+			<if test="loginPassword != null">
 				LoginPassWord,
 			</if>
 			<if test="phone != null">
@@ -47,17 +47,17 @@
 			</if>
 		</trim>
 		<trim prefix="values (" suffix=")" suffixOverrides=",">
-			<if test="userid != null">
-				#{userid,jdbcType=VARCHAR},
+			<if test="userID != null">
+				#{userID,jdbcType=VARCHAR},
 			</if>
-			<if test="loginname != null">
-				#{loginname,jdbcType=VARCHAR},
+			<if test="loginName != null">
+				#{loginName,jdbcType=VARCHAR},
 			</if>
 			<if test="name != null">
-				#{Name,jdbcType=VARCHAR},
+				#{name,jdbcType=VARCHAR},
 			</if>
-			<if test="password != null">
-				#{loginPassWord,jdbcType=VARCHAR},
+			<if test="loginPassword != null">
+				#{loginPassword,jdbcType=VARCHAR},
 			</if>
 			<if test="phone != null">
 				#{phone,jdbcType=VARCHAR},

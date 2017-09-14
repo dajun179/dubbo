@@ -1,4 +1,4 @@
-package com.lib.constant;
+package com.lb.constant;
 
 /**
 * @package com.lib.constant.ResultStatusEnum.java
