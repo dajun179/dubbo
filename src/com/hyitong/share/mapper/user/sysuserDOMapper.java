@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 public interface sysuserDOMapper {
     int countByExample(sysuserDOExample example);
-
+   
     int deleteByExample(sysuserDOExample example);
 
     int deleteByPrimaryKey(String loginname);
@@ -26,5 +26,4 @@ public interface sysuserDOMapper {
 
     int updateByPrimaryKeySelective(sysuserDO record);
 
-    int updateByPrimaryKey(sysuserDO record);
 }
