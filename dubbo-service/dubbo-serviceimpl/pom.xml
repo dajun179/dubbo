@@ -119,7 +119,9 @@
 					<include>**/*.properties</include>
 				</includes>
 			</resource>
+			
 			<!-- 结合com.alibaba.dubbo.container.Main -->
+			<!-- 原因是我们在打包配置时将spring-context.xml文件复制到META-INF/spring下，如果还是使用相对地址配置就出错了找不到文件 -->
 			<resource>
 				<targetPath>${project.build.directory}/classes/META-INF/spring</targetPath>
 				<directory>src/main/resources/spring</directory>
@@ -128,6 +130,7 @@
 					<include>spring-context.xml</include>
 				</includes>
 			</resource>
+			
 		</resources>
 
 		<pluginManagement>

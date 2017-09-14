@@ -22,7 +22,10 @@
 			<groupId>net.sourceforge.jtds</groupId>
 			<artifactId>jtds</artifactId>
 		</dependency>
-		
+		<dependency>
+		   <groupId>mysql</groupId>
+		   <artifactId>mysql-connector-java</artifactId>
+		</dependency>
 
 		<!-- db connection pool -->
 		<dependency>
