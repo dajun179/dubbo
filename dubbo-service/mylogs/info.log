@@ -425,4 +425,13 @@ Caused by: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
  2017-09-14 15:36:17 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[WARN] No MyBatis mapper was found in '[com.lib.mapper]' package. Please check your configuration.
  2017-09-14 15:36:17 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[WARN] No MyBatis mapper was found in '[com.lib.mapper]' package. Please check your configuration.
  2017-09-14 15:36:17 [com.alibaba.druid.pool.DruidDataSource]-[INFO] {dataSource-1} inited
+ 2017-09-14 15:40:12 [org.springframework.context.support.ClassPathXmlApplicationContext]-[INFO] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@311d617d: startup date [Thu Sep 14 15:40:12 CST 2017]; root of context hierarchy
+ 2017-09-14 15:40:12 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from file [D:\ProgramFile\Test\dubbo-parent\dubbo-service\dubbo-serviceimpl\target\classes\spring\applicationContext-dao.xml]
+ 2017-09-14 15:40:12 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from file [D:\ProgramFile\Test\dubbo-parent\dubbo-service\dubbo-serviceimpl\target\classes\spring\applicationContext-service.xml]
+ 2017-09-14 15:40:12 [com.alibaba.dubbo.common.logger.LoggerFactory]-[INFO] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+ 2017-09-14 15:40:12 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from file [D:\ProgramFile\Test\dubbo-parent\dubbo-service\dubbo-serviceimpl\target\classes\spring\applicationContext-transaction.xml]
+ 2017-09-14 15:40:12 [org.springframework.beans.factory.xml.XmlBeanDefinitionReader]-[INFO] Loading XML bean definitions from file [D:\ProgramFile\Test\dubbo-parent\dubbo-service\dubbo-serviceimpl\target\classes\spring\applicationContext-dao.xml]
+ 2017-09-14 15:40:12 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[WARN] No MyBatis mapper was found in '[com.lib.mapper]' package. Please check your configuration.
+ 2017-09-14 15:40:12 [org.mybatis.spring.mapper.ClassPathMapperScanner]-[WARN] No MyBatis mapper was found in '[com.lib.mapper]' package. Please check your configuration.
+ 2017-09-14 15:40:13 [com.alibaba.druid.pool.DruidDataSource]-[INFO] {dataSource-1} inited
  
