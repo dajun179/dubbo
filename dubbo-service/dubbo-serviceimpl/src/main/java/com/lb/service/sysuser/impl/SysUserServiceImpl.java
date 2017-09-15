@@ -10,6 +10,7 @@ import com.lb.constant.ResultStatusEnum;
 import com.lb.mapper.user.SysUserMapper;
 import com.lb.service.sysuser.SysUserService;
 import com.lb.user.domain.pojo.SysUserDO;
+import com.lb.utils.CommonUtil;
 
 @Service
 public class SysUserServiceImpl implements SysUserService{
@@ -27,9 +28,13 @@ public class SysUserServiceImpl implements SysUserService{
 		SysUserDO bean = new SysUserDO();
 		bean.setResultCode(ResultStatusEnum.FAIL.getCode());
 		bean.setResultMsg(ResultStatusEnum.FAIL.getName());
+		logger.info("新增用户 params:"+condition);
 		
 		try {
 			bean = JSON.parseObject(condition, SysUserDO.class);
+			bean.setUserID(CommonUtil.getUUID());
+			bean.setStatus("1");
+			
 			int affectCount = sysUserMapper.insertSysUser(bean);
 			if (affectCount > 0) {
 				bean.setResultCode(ResultStatusEnum.SUCCESS.getCode());

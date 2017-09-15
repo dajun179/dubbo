@@ -6,7 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * @package com.lib.service.startserviceimpl.StartServiceImpl.java 启动
+ * @package com.lib.service.startserviceimpl.StartServiceImpl.java 
+ *  启动
  * @author dj
  * @phone 18895737300
  * @date 2017年9月14日 下午3:01:48
@@ -19,8 +20,8 @@ public class ShareServiceBootStrap {
 	public static void main(String[] args) {
 		try {
 			// spring-context.xml配置加入
-			ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-					"classpath:spring/applicationContext-*.xml");
+			@SuppressWarnings("resource")
+			ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
 			/*
 			 * <import resource="dubbo-provider.xml" />
 			 */

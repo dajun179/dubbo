@@ -8,6 +8,12 @@
         <dependent-module archiveName="dubbo-interface-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dubbo-interface/dubbo-interface">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="dubbo-utils-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dubbo-utils/dubbo-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dubbo-pojo-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dubbo-pojo/dubbo-pojo">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="dubbo-controller"/>
         <property name="java-output-path" value="/dubbo-controller/target/classes"/>
     </wb-module>
