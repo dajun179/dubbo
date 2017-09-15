@@ -8,6 +8,7 @@
   	<module>dubbo-controller</module>
   	<module>dubbo-service</module>
   	<module>dubbo-utils</module>
+  	<module>dubbo-api</module>
   </modules>
   
    <!-- 集中定义版本号 -->
