@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class AuthFilter implements Filter{
 	
-	// 不拦截的资源类型
+		// 不拦截的资源类型
 		private String[] ignoreTypes;
 
 		@Override
