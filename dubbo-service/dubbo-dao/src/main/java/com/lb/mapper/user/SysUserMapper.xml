@@ -8,12 +8,12 @@
 		<result column="LoginPassWord" property="loginPassword" jdbcType="VARCHAR" />
 		<result column="Name" property="name" jdbcType="VARCHAR" />
 		<result column="Phone" property="phone" jdbcType="VARCHAR" />
-		<result column="Email" property="email" jdbcType="VARCHAR" />
-		<result column="RegisterTime" property="registerTime" jdbcType="DATE" />
+		<result column="Status" property="status" jdbcType="VARCHAR" />
+		<result column="Role_ID" property="role_ID" jdbcType="VARCHAR" />
 	</resultMap>
 
 	<sql id="Base_Column_List">
-		LoginName, Name, UserID, LoginPassWord, Phone, Email, RegisterTime
+		LoginName, Name, UserID, LoginPassWord, Phone, Status, Role_ID
 	</sql>
 
 	<select id="getSysUserByloginName" resultMap="BaseResultMap"
@@ -21,7 +21,7 @@
 		select
 		<include refid="Base_Column_List" />
 		from sysuser
-		where LoginName = #{loginname,jdbcType=VARCHAR}
+		where LoginName = #{loginName,jdbcType=VARCHAR}
 	</select>
 
 	<insert id="insertSysUser" parameterType="com.lb.user.domain.pojo.SysUserDO">
