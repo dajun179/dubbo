@@ -27,4 +27,8 @@ public class TestSysUserServiceImpl extends BaseJunitTest{
 		fail(services.addUser(JSONObject.toJSONString(sysUserDO)));
 	}
 
+	@Test
+	public void testLogin(){
+		fail(services.login("adfs", "000"));
+	}
 }

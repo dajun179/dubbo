@@ -1,8 +1,8 @@
 package com.lb.user.domain.pojo;
 
-import com.lb.base.pojo.BaseDTO;
+import java.io.Serializable;
 
-public class SysUserDO extends BaseDTO{
+public class SysUserDO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
