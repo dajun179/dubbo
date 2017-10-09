@@ -45,6 +45,10 @@
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<zxing.core.version>3.3.0</zxing.core.version>
 		<mysql.version>5.1.6</mysql.version>
+		<jackson.version>2.8.4</jackson.version>
+		<javaxservlet-api.version>3.1.0</javaxservlet-api.version>
+		<spring-data-redis.version>1.4.2.RELEASE</spring-data-redis.version>
+		<jedis.version>2.6.2</jedis.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -332,7 +336,32 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql.version}</version>
 			</dependency>
-						
+		
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${javaxservlet-api.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-redis</artifactId>
+				<version>${spring-data-redis.version}</version>
+			</dependency>
+			
+			<!-- Redis客户端 -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
+			</dependency>
+		
 		</dependencies>
 	</dependencyManagement>
 	

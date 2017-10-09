@@ -13,8 +13,6 @@ import com.lb.service.sysuser.SysUserService;
 import com.lb.user.domain.pojo.SysUserDO;
 import com.lb.utils.CommonUtil;
 
-import net.sf.json.JSONObject;
-
 @Service
 public class SysUserServiceImpl implements SysUserService{
 

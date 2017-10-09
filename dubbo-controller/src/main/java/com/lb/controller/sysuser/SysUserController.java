@@ -24,6 +24,11 @@ public class SysUserController {
 		return "user/login";
 	}
 	
+	@RequestMapping("/surprise.do")
+	public String surprise(){
+		return "surprise/surprise";
+	}
+	
 	/**
 	 * 新增用户
 	 * @param condition
@@ -49,7 +54,7 @@ public class SysUserController {
 	 * @param condition
 	 * @return
 	 */
-	@RequestMapping(value = "/login.do", produces = "application/json;charset=UTF-8", method = RequestMethod.POST)
+	@RequestMapping(value = "/login.do", produces = "application/json;charset=UTF-8")
 	@ResponseBody
 	public String login(String loginName, String loginPassword){
 		String result = "" ;

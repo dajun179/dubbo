@@ -17,8 +17,7 @@ public class Test {
 		String str = "loginName=adfs&loginPassword=000";
 		
 //		System.out.println(t.request("http://www.fightinlife.top:8080/dubbo-controller/user/login.do", str, "POST"));
-		System.out.println(t.request("http://127.0.0.1:8080/dubbo-controller/user/addSysUser.do", str, "POST"));
+		System.out.println(t.request("http://127.0.0.1:8080/dubbo-controller/user/login.do", str, "GET"));
 		
 	}
-	
 }

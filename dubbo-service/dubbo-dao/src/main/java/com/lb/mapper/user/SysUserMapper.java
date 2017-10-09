@@ -10,7 +10,7 @@ public interface SysUserMapper {
      * @return
      */
     int insertSysUser(SysUserDO record);
-//	
+    
 //    /**
 //     * 更新用户记录
 //     * @param record
@@ -45,6 +45,5 @@ public interface SysUserMapper {
      * @return
      */
     SysUserDO getSysUserByloginName(String loginName);
-
     
 }
