@@ -24,9 +24,14 @@ public class SysUserController {
 		return "user/login";
 	}
 	
-	@RequestMapping("/surprise.do")
-	public String surprise(){
-		return "surprise/surprise";
+	@RequestMapping("/showIndex.do")
+	public String showIndex(){
+		return "/index";
+	}
+	
+	@RequestMapping("/showDesktop.do")
+	public String showDesktop(){
+		return "/desktop";
 	}
 	
 	/**

@@ -21,23 +21,7 @@
 	        http://www.springframework.org/schema/cache/spring-cache.xsd">
 			
 		    <!-- 加载数据库文件 -->
-		    <context:property-placeholder location="classpath:properties/db.properties,properties/redis.properties" />
-		    
-		    <!-- redis数据源 -->
-			<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">  
-			    <property name="maxIdle" value="${redis.maxIdle}" />  
-			    <property name="maxTotal" value="${redis.maxActive}" />  
-			    <property name="maxWaitMillis" value="${redis.maxWait}" />  
-			    <property name="testOnBorrow" value="${redis.testOnBorrow}" />  
-			</bean>
-			<!-- Spring-redis连接池管理工厂 -->
-			<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"  
-			    p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>  
-			<!-- 使用中间类解决RedisCache.jedisConnectionFactory的静态注入，从而使MyBatis实现第三方缓存 -->
-			<bean id="redisCacheTransfer" class="com.strive.cms.cache.RedisCacheTransfer">
-			    <property name="jedisConnectionFactory" ref="jedisConnectionFactory"/>
-			</bean>
-
+		    <context:property-placeholder location="classpath:properties/db.properties" />
 		    
 		    <!-- 数据库连接池 -->
 		    <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
@@ -47,15 +31,18 @@
 				<property name="driverClassName" value="${jdbc.driverClassName}" />
 				<property name="maxActive" value="10" />
 				<property name="minIdle" value="5" />
-				
 			</bean>
+			
+			
 			<!-- 让spring管理 sqlSessionFactory 使用myBatis 和spring 整合包中的-->
 			<bean id = "sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 				<!-- 数据库连接池 -->
 				<property name="dataSource" ref = "datasource" />
 				<!-- 加载mybatis 的全局配置文件 -->
 				<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"></property>	
+				<property name="mapperLocations" value="classpath*:com/huaxin/**/*Mapper.xml"></property>  
 			</bean>
+			
 			<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 				<property name="basePackage" value="com.lb.mapper"></property>	
 			</bean>
